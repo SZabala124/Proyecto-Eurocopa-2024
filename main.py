@@ -1649,7 +1649,7 @@ class InterfaceManager:
                     tickets_by_customer[ticket.customer] += 1
                 customers_info_list = []
                 for customer, value in tickets_by_customer.items():
-                    item = [customer, value]
+                    item = [customer.full_name, value]
                     customers_info_list.append(item)
                 customers_info_list.sort(key=lambda x: x[1], reverse=True)
                 if not customers_info_list:
